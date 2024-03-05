@@ -25,7 +25,8 @@ def is_libreoffice_installed():
         
     return False
 
-input_file = './fileTest/docTest.doc'
-output_file='./fileTest/'
-format = 'docx'
-docToDocx(input_file,output_file,format)
+if __name__ == '__main__':
+    input_file = './fileTest/docTest.doc'
+    output_file='./fileTest/'
+    format = 'docx'
+    docToDocx(input_file,output_file,format)
