@@ -36,4 +36,12 @@
     ```
     4. 一个很尴尬的问题 ，github 查看unoconv 文档时发现他不在维护了。而是换成了 unoserver 然后我安装文档换成了这个。但是但是，安装后 调用失败。
 
-### Day 2 2024-02-24 项目启动第二天
+### Day 11 2024-03-05 项目启动第二天
+    我们可能并不需要 启用 unoserver 我们使用 可以直接使用 libreoffice 的命令进行文档转换
+    ```shell
+        libreoffice --headless --convert-to docx input.doc
+    ``` 
+    我们整合一下 文档转换的步骤
+    1. apt-get install libreoffice
+    2. libreoffice  --headless --convert-to docx --outdir ./fileTest/ ./fileTest/docTest.doc 
+    OK 文档转换的问题解决了。
