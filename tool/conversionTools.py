@@ -10,11 +10,11 @@ def __conversionTools(input_file,output_file,type):
     if(__is_libreoffice_installed==False):
         print('系统没有安装libreoffice')
         raise FileNotFoundError('系统中没有找到libreoffice请自行安装')
-    command = ['libreoffice','--headless','--convert-to',format,'--outdir',output_file,input_file]
+    command = ['libreoffice','--headless','--convert-to',type.value,'--outdir',output_file,input_file]
     subprocess.run(command,check=True)
     file = os.path.basename(input_file)
     fileName = os.path.splitext(file)[0]
-    converted_file = fileName+'.'+type
+    converted_file = fileName+'.'+type.value
     return converted_file
 
 #doc转docx
