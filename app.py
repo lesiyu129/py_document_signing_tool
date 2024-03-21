@@ -36,7 +36,7 @@ def main():
     # 文档签名结束
     
     
-    return 'OK',200
+    return jsonify({'message':'OK'}),200
     
 def mkdirPath(filePath):
     if os.path.exists(filePath) and os.path.isdir(filePath):
